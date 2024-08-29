@@ -1,0 +1,22 @@
+nav {
+    color: #333D4B;
+    text-transform: capitalize;
+    font-size: 2vh;
+}
+.navElm {
+    font-weight: 400;
+    transition: transform 0.2s ease;
+}
+.navElm:hover {
+    animation: animateFontWeight 0.2s forwards;
+    transform: scale(1.005);
+    text-shadow: 1px 1px 1px #1111119e;
+}
+@keyframes animateFontWeight {
+    0% {
+        font-weight: 400;
+    }
+    100% {
+        font-weight: 600;
+    }
+}

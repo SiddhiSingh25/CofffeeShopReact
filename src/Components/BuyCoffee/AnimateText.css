@@ -1,0 +1,61 @@
+/* Container for the moving content */
+.moving-box {
+    position: relative;
+    overflow: hidden;
+    width: 100%;
+    height: 100px; /* Adjust the height as needed */
+    display: flex;
+    align-items: center;
+}
+
+/* Move container with the animation */
+.move-container {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    animation: moveanime 11s linear infinite;
+}
+
+/* Animation to move content leftward */
+@keyframes moveanime{
+    0%{
+        transform: translateX(0);
+
+    }
+    100%{
+        transform: translateX(-100%);
+
+    }
+}
+
+/* Blurred edges on the left and right for a smooth visual effect */
+.blur-left, .blur-right {
+    position: absolute;
+    width: 300px; /* Adjust width as needed */
+    height: 100%;
+    background: rgba(255, 255, 255, 0.774); /* Semi-transparent white blur */
+    z-index: 1;
+}
+
+.blur-left {
+    left: 0;
+}
+
+.blur-right {
+    right: 0;
+}
+
+/* Style for brand items */
+.brand-item {
+    display: flex;
+    align-items: center;
+    min-width: 13vw; 
+    height: 6vh;/* Space between items */
+}
+
+.brand-name {
+    margin-left: 10px; /* Space between icon and text */
+    font-size: 3vh; /* Adjust font size */
+    color: #333; 
+    text-shadow: 1px 1px 1px #dcd6d6;
+}
